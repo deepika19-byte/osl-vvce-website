@@ -110,19 +110,14 @@ export default ({ data, location }: PageProps<IndexPageQuery>) => {
 const Wall = ({ data }) => {
     const twoColumnWall = data.twoColumnWall
 
-    const heroStyle =
-    data.titleImage
-            ? {
-                  backgroundImage: `linear-gradient(90deg, rgba(11,11,16,.2), rgba(11,11,16,.75)), url("${data.titleImage}")`,
-              }
-            : undefined
+    
 
     return (
         <section
             className={`osl-hero ${
                 twoColumnWall ? "osl-hero-with-image" : ""
             }`}
-            style={heroStyle}
+           
             aria-labelledby="osl-hero-title"
         >
             <div className="osl-hero-glow osl-hero-glow-one" aria-hidden="true" />
